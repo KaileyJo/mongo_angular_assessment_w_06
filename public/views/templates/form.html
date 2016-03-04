@@ -1,0 +1,17 @@
+<div class="col-md-10 col-md-offset-1">
+    <form id="hero-form">
+        <label for="alias">Alias: </label>
+        <input type="text" id="alias" ng-model="alias" name="alias" />
+        <label for="first">First Name: </label>
+        <input type="text" id="first" ng-model="first" name="first" />
+        <label for="last">Last: </label>
+        <input type="text" id="last" ng-model="last" name="last" />
+        <label for="city">City: </label>
+        <input type="text" id="city" ng-model="city" name="city" />
+        <div class="row">
+            <label for="power">Super Power:</label>
+            <select id="power" ng-model="power" ng-options="power.power_name for power in powers"></select>
+            <input id="submit" type="submit" ng-click="submitHero()" value="Add Hero" />
+        </div>
+    </form>
+</div>

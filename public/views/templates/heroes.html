@@ -1,0 +1,13 @@
+<div class="col-md-10 col-md-offset-1">
+    <select ng-model="power" ng-options="power.power_name for power in powers">
+    </select>
+
+    <div ng-repeat="hero in heroes | filter: {primary_power: power.power_name}">
+        <h3>{{hero.alias}}</h3>
+        <p>{{hero.first_name}} {{hero.last_name}}</p>
+        <p>{{hero.city}}</p>
+        <p>{{hero.primary_power}}</p>
+        <button ng-click="delete(hero._id)">Delete Hero</button>
+    </div>
+    <button ng-click="power = '?'">View All</button>
+</div>
