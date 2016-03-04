@@ -20,8 +20,8 @@ myApp.factory('dataFactory', ['$http', function($http) {
         return promise;
     };
 
-    var postHeroData = function(task) {
-        var promise = $http.post('/heroes', task).then(function(response) {});
+    var postHeroData = function(hero) {
+        var promise = $http.post('/heroes', hero).then(function(response) {});
         return promise;
     };
 
