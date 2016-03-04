@@ -1,7 +1,6 @@
 myApp.controller('FormController', ['$scope', 'dataFactory', function($scope, dataFactory) {
     console.log('Form Controller');
     $scope.dataFactory = dataFactory;
-    $scope.taskItem = '';
     $scope.powers = function() {
         dataFactory.getPowers().then(function(response){
             console.log(response);
@@ -22,7 +21,13 @@ myApp.controller('FormController', ['$scope', 'dataFactory', function($scope, da
             city: $scope.city,
             power: $scope.power.power_name
         };
-        dataFactory.postHero(newHero).then(function() {});
+        dataFactory.postHero(newHero).then(function() {
+            $scope.alias = '';
+            $scope.first = '';
+            $scope.last = '';
+            $scope.city = '';
+            $scope.power = '?';
+        });
     };
 
     getPowerData();

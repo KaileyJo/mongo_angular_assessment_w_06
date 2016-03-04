@@ -30,7 +30,6 @@ app.get('/heroes', function(req, res) {
         if(err) {
             console.log(err);
         }
-        //console.log(data);
         res.send(data);
     });
 });
@@ -53,7 +52,6 @@ app.get('/powers', function(req, res) {
         if(err) {
             console.log(err);
         }
-        //console.log(data);
         res.send(data);
     });
 });
